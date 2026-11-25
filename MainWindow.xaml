@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <ToolBar Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Background="{StaticResource ControlBackground}" Height="42.7">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Rectangle" Style="{StaticResource RaisedButtonStyle}"/>
+                <Button Content="Rectangle" Style="{StaticResource RaisedButtonStyle}" Click="RectangleButton_Click"/>
                 <Button Content="Ellipse" Style="{StaticResource RaisedButtonStyle}"/>
                 <Button Content="Triangle" Style="{StaticResource RaisedButtonStyle}"/>
             </StackPanel>
@@ -39,7 +39,8 @@
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Vertical" Background="{StaticResource ControlBackground}">
                     <TextBlock Text="Shape properties" HorizontalAlignment="Center" Margin="0,4,0,4" Height="Auto"/>
-                    <local:ShapePropertiesGrid x:Name="PropertiesGrid" ColumnHeader="{Binding GridColumnHeader}"/>
+                    <local:ShapePropertiesGrid x:Name="PropertiesGrid" ColumnHeader="{Binding GridColumnHeader,
+                   RelativeSource={RelativeSource AncestorType=Window}}"/>
                 </StackPanel>
             </Grid>
         </Grid>

@@ -12,8 +12,7 @@ namespace ClassicUI
             nameof(ColumnHeader),
             typeof(string),
             typeof(ShapePropertiesGrid),
-            new PropertyMetadata("Shape")
-            );
+            new PropertyMetadata("Shape", OnColumnHeaderChanged));
 
         public string ColumnHeader
         {
@@ -21,6 +20,11 @@ namespace ClassicUI
             set => SetValue(ColumnHeaderProperty, value);
         }
 
+        private static void OnColumnHeaderChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = (ShapePropertiesGrid)d;
+            control.ShapeColumn.Header = e.NewValue;
+        }
 
         public ShapePropertiesGrid()
         {
