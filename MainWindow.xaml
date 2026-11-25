@@ -39,8 +39,7 @@
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Vertical" Background="{StaticResource ControlBackground}">
                     <TextBlock Text="Shape properties" HorizontalAlignment="Center" Margin="0,4,0,4" Height="Auto"/>
-                    <local:ShapePropertiesGrid x:Name="PropertiesGrid" ColumnHeader="{Binding GridColumnHeader,
-                   RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    <local:ShapePropertiesGrid x:Name="PropertiesGrid" ColumnHeader="Test header"/>
                 </StackPanel>
             </Grid>
         </Grid>
