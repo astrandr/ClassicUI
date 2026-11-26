@@ -27,5 +27,9 @@ namespace ClassicUI
                 ItemsSource = new[] { "Ellipse", "Ellipse", "Ellipse" }
             };
         }
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

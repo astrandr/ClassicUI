@@ -29,6 +29,12 @@
                 <Button Content="Select" Style="{StaticResource RaisedButtonStyle}"/>
                 <Button Content="Delete" Style="{StaticResource RaisedButtonStyle}"/>
             </StackPanel>
+
+            <Separator/>
+
+            <StackPanel Orientation="Horizontal">
+                <local:ToolBarButton Text="Delete" Button.Click="DeleteButton_Click"/>
+            </StackPanel>
         </ToolBar>
         <Grid Grid.Column="0" Grid.Row="1" >
             <Grid.ColumnDefinitions>
